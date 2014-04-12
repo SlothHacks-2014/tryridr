@@ -1,0 +1,12 @@
+config =
+  filename: __filename
+  styles: '../styles/ui'
+  scripts:
+    connectionAlert: require './connectionAlert/index.coffee'
+    validatedPassword: require './validatedPassword/index.coffee'
+    validatedEmail: require './validatedEmail/index.coffee'
+    validatedName: require './validatedName/index.coffee'
+    validatedUsername: require './validatedUsername/index.coffee'
+
+module.exports = (app, options) ->
+  app.createLibrary config, options

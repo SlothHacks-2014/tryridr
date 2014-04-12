@@ -1,0 +1,17 @@
+body {
+
+}
+
+.ui-connection{
+	height: 100%;
+	z-index: -1000;
+	background-color: @cwhite;
+}
+
+.signup-box{
+	background-color: darken(@cwhite, 10%);
+}
+
+.text-brand{
+	color: @cblue;
+}

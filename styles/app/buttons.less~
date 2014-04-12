@@ -1,0 +1,3 @@
+.btn-brand {
+  .button-variant(@cowhite, @coblue, lighten(@cowhite, 20%));
+}

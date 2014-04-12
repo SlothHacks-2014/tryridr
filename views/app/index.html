@@ -1,0 +1,39 @@
+<import: src="./home">
+<import: src="./list">
+
+<Head:>
+  <meta name="application-name" content="Collabrios"/>
+  <meta name="author" content="Ari Falkner" />
+  <meta name="keywords" content="collaborate, platform, collaborating, collabrios" />
+  <meta name="description" content="Build a team to realize your dream."/>
+  <meta name="viewport" content="width=device-width" />
+  <link rel=icon type="image/png" href="/images/brand/logo.png" />
+
+<Header:>
+  <body class="{{dash($ns)}}">
+  <ui:connectionAlert>
+  <div class="content">
+    <div class="container">
+
+
+<Footer:>
+    </div>
+  </div>
+  <footer>
+    <p class="text-center">&copy; {_page.year} Collabrios LLC. All rights reserved.</p>
+  </footer>
+
+<Scripts:>
+  <script defer src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script defer src="/scripts/jquery-ui-1.10.3.custom.min.js"></script>
+  <script defer src="/scripts/bootstrap.min.js"></script>
+  <script defer src="/scripts/oauth.js"></script>
+  <script defer src="/scripts/jquery.scrollTo.min.js"></script>
+
+<navLink: nonvoid>
+  <li class="{{#if equal($url, @href)}}active{{/}}">
+    <a href="{{@href}}">{{@content}}</a>
+  </li>
+
+
+
