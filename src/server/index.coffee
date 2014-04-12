@@ -86,20 +86,31 @@ model = store.createModel()
 
 # SERVER-SIDE ROUTES #
 
-expressApp.use (req, res, next) ->
-  host = process.env.NEW_BASE_URL || 'localhost'
+#expressApp.use (req, res, next) ->
+# host = process.env.NEW_BASE_URL || 'localhost'
 
-  if req.host != host
-    res.redirect ('http://' + process.env.NEW_BASE_URL + req.url)
+# if req.host != host
+#   res.redirect ('http://' + process.env.NEW_BASE_URL + req.url)
   
-  else
-    next()
+# else
+#   next()
 
 # Create an express middleware from the app's routes
 expressApp.use(app.router())
 expressApp.use(expressApp.router)
 expressApp.use(error()) 
 
+location = (lat, long) ->
+  return 'zones' + lat + long + '.value'
+
+expressApp.get '/zones/:lat/:long', (req, res, next) ->
+   model.subscribe location(req.params.lat, req.params.long), ->
+     res.json { value: model.get(location(req.params.lat, req.params.long)) }
+
+expressApp.get '/zones/:lat/:long/:level', (req, res, next) ->
+  model.subscribe location(req.params.lat, req.params.long), ->
+    model.set(location(req.params.lat, req.params.long), req.params.level)
+    res.send()
 
 expressApp.all '*', (req, res, next) ->
   next '404: ' + req.url
