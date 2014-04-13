@@ -4384,6 +4384,11 @@ a.list-group-item.active > .badge,
   right: 50%;
   height: 60%;
 }
+.jumbotron .btn{
+  width: 15em;
+  float: right;
+
+}
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
