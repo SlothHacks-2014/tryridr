@@ -4465,11 +4465,11 @@ body.vjs-full-window {
 footer {
   background-color: #edeff1;
   color: #bac1c8;
-  font-size: 15px;
+  font-size: 2em;
   padding: 0;
 }
 footer a {
-  color: #9aa4af;
+  color: #bac1c8;
   font-weight: 700;
 }
 footer p {

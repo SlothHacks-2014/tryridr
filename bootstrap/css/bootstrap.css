@@ -9,6 +9,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  background-color: #1abc9c;
 }
 body {
   margin: 0;
@@ -4372,7 +4373,7 @@ a.list-group-item.active > .badge,
 }
 .masthead img {
   padding-top: 2em;
-  width: 20em;
+  width: 17em;
 }
 .jumbotron {
   padding: 5%;
