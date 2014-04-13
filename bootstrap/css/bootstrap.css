@@ -4372,17 +4372,17 @@ a.list-group-item.active > .badge,
 }
 .masthead img {
   padding-top: 2em;
-  width: 15em;
+  width: 20em;
 }
 .jumbotron {
-  padding: 30px;
-  padding-top: 5em;
-  margin-bottom: 30px;
+  padding: 5%;
+  padding-top: 5%;
+  margin-bottom: 5%;
   color: white;
   text-align: right;
   width: 50%;
   right: 50%;
-  height: 50em;
+  height: 60%;
 }
 .jumbotron h1,
 .jumbotron .h1 {
